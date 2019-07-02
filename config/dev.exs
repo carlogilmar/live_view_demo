@@ -52,7 +52,8 @@ config :counter, CounterWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/counter_web/views/.*(ex)$},
-      ~r{lib/counter_web/templates/.*(eex)$}
+      ~r{lib/counter_web/templates/.*(eex)$},
+      ~r{lib/counter_web/live/.*(ex)$}
     ]
   ]
 
