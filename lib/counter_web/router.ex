@@ -19,6 +19,7 @@ defmodule CounterWeb.Router do
     pipe_through :browser
 
     live "/", CounterLive
+    live "/pictures", PicturesLive
   end
 
   # Other scopes may use custom stacks.
