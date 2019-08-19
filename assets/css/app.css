@@ -2,3 +2,24 @@
 
 @import "./phoenix.css";
 @import "../../deps/phoenix_live_view/assets/css/live_view.css";
+
+.pixel {
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #f8f6f6;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #fdafc52e;
+}
+
+.pixel_updated {
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #f8f6f6;
+  width: 30px;
+  height: 30px;
+  float: left;
+  background-color: #ff4152;
+}
+
