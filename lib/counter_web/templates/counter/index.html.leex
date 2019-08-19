@@ -3,3 +3,18 @@
   <button phx-click="dec">-</button>
   <button phx-click="inc">+</button>
 </div>
+<hr>
+<h1> Pixels </h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <%= for {pixel_id, pixel} <- @pixels do %>
+      <div class="<%= pixel.class %>" phx-click="change" phx-value="<%= pixel_id %>"></div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+
