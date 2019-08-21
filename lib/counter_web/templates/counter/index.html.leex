@@ -10,11 +10,15 @@
   <div class="row">
     <div class="col-md-12">
     <%= for {pixel_id, pixel} <- @pixels do %>
-      <div class="<%= pixel.class %>" phx-click="change" phx-value="<%= pixel_id %>"></div>
+      <div class="<%= pixel.class %> click" phx-click="change" phx-value="<%= pixel_id %>"></div>
     <% end %>
     </div>
   </div>
 </div>
 
 
-
+<script>
+  let divs = document.getElementsByClassName('click')
+  let size = divs.length
+  for (var i = 0; i<size; i++){ document.getElementsByClassName('click')[i].addEventListener('click', function (event) { console.log("Change"); }); }
+</script>
