@@ -19,11 +19,7 @@ defmodule CounterWeb.CounterLive do
   end
 
   def handle_event("change", pixel_id, socket) do
-    pixels = Pixels.get_init_state()
-    pixels= Map.put(pixels, pixel_id, %{class: "pixel_updated", id: pixel_id})
-    socket =
-      socket
-      |> assign(:pixels, pixels)
+		_ = Counter.Grid.update_from_view(pixel_id)
     {:noreply, socket}
   end
 

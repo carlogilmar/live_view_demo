@@ -8,10 +8,12 @@ defmodule Counter.Pixels do
   end
 
   def next_state(pixels_grid) do
-    for {pixel_id, %{class: _class, id: _pixel_id}} <- pixels_grid do
-      next_class = Enum.random(1..5)
-      {pixel_id, %{class: "pixel#{next_class}", id: pixel_id}}
-    end
+		grid =
+      for {pixel_id, %{class: _class, id: _pixel_id}} <- pixels_grid do
+        next_class = Enum.random(1..5)
+        {pixel_id, %{class: "pixel#{next_class}", id: pixel_id}}
+      end
+		Map.new(grid)
   end
 
 end
