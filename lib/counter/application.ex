@@ -9,7 +9,8 @@ defmodule Counter.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      CounterWeb.Endpoint
+      CounterWeb.Endpoint,
+			{Counter.Grid, []}
       # Starts a worker by calling: Counter.Worker.start_link(arg)
       # {Counter.Worker, arg},
     ]
